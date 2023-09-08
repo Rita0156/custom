@@ -5,7 +5,7 @@ import { useTimer } from './Hooks/useTimer';
 
 function App() {
   //const [com,setCom]=useState("Not Complete")
-  const ready=useTimer();
+  const ready=useTimer(5000);
   //(ready?setCom("Not Complete"):setCom("Completed"))
   return (
     <div className="App">

@@ -1,11 +1,11 @@
 
 import React, { useEffect } from "react"
-const useTimer=()=>{
+const useTimer=(tm)=>{
     const [ready,setReady]=React.useState(false)
     useEffect(()=>{
        const time= setTimeout(()=>{
             setReady(true)
-         },5000)
+         },tm)
          clearTimeout(time)
          
     },[])

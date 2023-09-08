@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Input from "./hooks/Input"
+import { useState } from 'react';
+
 
 function App() {
+  const [otp,setOtp]=useState("")
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+       <Input length={5}/>
+       <div>The OTP input is {otp}</div>
     </div>
   );
 }
 
 export default App;
+
+
