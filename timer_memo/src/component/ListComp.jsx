@@ -7,28 +7,28 @@ function ListComp(){
         {
             id:1,
             title:"Work 1",
-            body: "com",
+           
             verifyPost: false
         },
         {
             id:2,
             title:"Work 2",
-            body: "com 2",
+            
             verifyPost: false
         },
         {
             id:3,
             title:"Work 3",
-            body: "com 3",
+           
             verifyPost: false
         }
     ]
-    const [todo,setTodo]=useState(data)
+    const [todo,setTodo]=useState([...data])
     const handalSub=()=>{
         const obj={
             title:tit,
-            id:tit,
-            body:"com a",
+            id:todo.length+1,
+           
             verifyPost:false
         }
         setTodo(...todo,obj)
