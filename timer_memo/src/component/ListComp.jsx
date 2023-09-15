@@ -31,7 +31,7 @@ function ListComp(){
            
             verifyPost:false
         }
-        setTodo(...todo,obj)
+        setTodo({...todo,obj})
         setTit("")
     }
     const handalChange=(e)=>{
