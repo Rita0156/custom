@@ -23,14 +23,15 @@ function ListComp(){
             verifyPost: false
         }
     ]
+    const [todo,setTodo]=useState(data)
     const handalSub=()=>{
-        let obj={
+        const obj={
             title:tit,
             id:tit,
             body:"com a",
             verifyPost:false
         }
-        data.push(obj)
+        setTodo(...todo,obj)
         setTit("")
     }
     const handalChange=(e)=>{
@@ -42,10 +43,10 @@ function ListComp(){
            <div onSubmit={handalSub}>
              <input value={tit} onChange={handalChange} type="text" placeholder="Add Title"/>
 
-             <buttun type="submit">Add</buttun>
+             <buttun onClick={handalSub}>Add</buttun>
            </div>
            <div>
-              {data.map((item)=>(
+              {todo.map((item)=>(
                 <div>
                     <h1>{item.title}</h1>
                     <h2>{item.verifyPost}</h2>
