@@ -3,11 +3,17 @@ import './App.css';
 
 function App() {
   const [count,setCount]=useState(0)
+  const add=()=>{
+    setCount(count+1)
+  }
+  const red=()=>{
+    setCount(count-1)
+  }
   return (
     <div className="App">
          <h1>The count is {count}</h1>
-         <button onClick={()=>{setCount(count+1)}}>Add</button>
-         <button onClick={()=>{setCount(count-1)}} >Reduce</button>
+         <button onClick={add}>Add</button>
+         <button onClick={red} >Reduce</button>
     </div>
   );
 }
