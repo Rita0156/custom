@@ -31,11 +31,11 @@ function App() {
   }
   return (
     <div className="App">
-         <div style={{width:"300px",height:"300px",border:"5px solid black", margin:"auto"}}>
-             <img style={{height:"300px",width:"300px", borderRadius:"6px"}} src={images[ind]}  alt='abc' />
+         <div style={{width:"300px",height:"300px",border:"5px solid black", margin:"auto",borderRadius:"6px",marginTop:"20px"}}>
+             <img style={{height:"300px",width:"300px"}} src={images[ind]}  alt='abc' />
          </div>
-         <button onClick={incCount}>Next</button>
-         <button onClick={decCount}>Privious</button>
+         <button style={{backgroundColor:"green", color:"white"}} onClick={incCount}>Next</button>
+         <button style={{backgroundColor:"orange", color:"white"}} onClick={decCount}>Privious</button>
 
          <div>
             <input value="value" onChange="value" />
